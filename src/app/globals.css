@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ── */
+:root {
+  --ink:          #0a0a0e;
+  --ink-75:       rgba(10, 10, 14, 0.75);
+  --surface:      #131318;
+  --surface-raised: #1a1a22;
+  --border:       rgba(255,255,255,0.07);
+  --bone:         #f2ece4;
+  --bone-dim:     rgba(242, 236, 228, 0.5);
+  --bone-mute:    rgba(242, 236, 228, 0.3);
+
+  /* Accent: Warm Copper / Rose-Gold instead of Gold */
+  --accent:       #d4956a;
+  --accent-bright: #e8ab82;
+  --accent-faint: rgba(212, 149, 106, 0.08);
+
+  /* Secondary accent: Soft Mauve */
+  --mauve:        #9b7aad;
+  --mauve-faint:  rgba(155, 122, 173, 0.08);
+
+  /* Gradient flow colors — pink/magenta/warm tones */
+  --gf-1: #9b3a6a;
+  --gf-2: #d4956a;
+  --gf-3: #6a4c93;
+  --gf-4: #c97b84;
+}
+
+/* ── Tailwind v4 Theme ── */
+@theme inline {
+  --color-ink:           var(--ink);
+  --color-surface:       var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-border:        var(--border);
+  --color-bone:          var(--bone);
+  --color-bone-dim:      var(--bone-dim);
+  --color-accent:        var(--accent);
+  --color-accent-bright: var(--accent-bright);
+  --color-accent-faint:  var(--accent-faint);
+  --color-mauve:         var(--mauve);
+  --font-sans: var(--font-noto-kr), var(--font-noto-sc), var(--font-noto-jp), sans-serif;
+  --font-display: var(--font-noto-kr), var(--font-noto-sc), var(--font-noto-jp), sans-serif;
+}
+
+/* ── Base ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--ink);
+  color: var(--bone);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Gradient Flow Background ── */
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-flow-bg {
+  background: linear-gradient(
+    135deg,
+    var(--gf-1) 0%,
+    var(--gf-2) 25%,
+    var(--gf-3) 50%,
+    var(--gf-4) 75%,
+    var(--gf-1) 100%
+  );
+  background-size: 300% 300%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* ── Marquee Scroll ── */
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-x {
+  animation: marquee-x 28s linear infinite;
+}
+
+.marquee-x:hover {
+  animation-play-state: paused;
+}
+
+/* ── Scroll Reveal ── */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Fallback animation for quick reveal */
+@keyframes fadeInUpReveal {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Glass Card Utility ── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(212, 149, 106, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+/* ── Accent Line Decorations ── */
+.accent-line {
+  width: 32px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--mauve));
+  border-radius: 999px;
+}
+
+/* ── Selection ── */
+::selection {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }

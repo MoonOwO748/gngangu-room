@@ -1,0 +1,224 @@
+{
+  "nav": {
+    "rooms": "Rooms",
+    "pricing": "Pricing",
+    "events": "Events",
+    "howto": "How to Visit",
+    "access": "Location",
+    "faq": "FAQ",
+    "reserve": "Online Reservation",
+    "international": "For Tourists",
+    "open_menu": "Open Menu",
+    "close_menu": "Close Menu"
+  },
+  "announcement": "Base charge ₩150,000 · ₩50,000 OFF before 9 PM · Open 365 Days",
+  "announcement_cta": "View Details",
+  "hero": {
+    "badge": "AK Dalto Official Reservation Site",
+    "title": "Gangnam AK Dalto",
+    "subtitle": "Premium private room karaoke in Yeoksam-dong, Gangnam. Transparent fixed pricing, early bird discounts.",
+    "badge_price": "Base 150k",
+    "badge_discount": "50k OFF before 9PM",
+    "badge_fixed": "Fixed Price",
+    "badge_hours": "Open 365 Days",
+    "call": "Call Now",
+    "online_reserve": "Reserve Online",
+    "urgent": "For urgent inquiries, phone calls are fastest"
+  },
+  "about": {
+    "label": "ABOUT AK DALTO",
+    "title": "Gangnam's Premier Hyper-Public AK Dalto",
+    "subtitle": "Located at Samjung Hotel, 604-11 Yeoksam-dong · 60 Private Rooms & ~200 Staff Daily",
+    "desc1": "AK Dalto is the flagship hyper-public venue in Gangnam. Situated at Samjung Hotel in Yeoksam-dong, we operate 60 private rooms with around 200 staff on duty every single day.",
+    "desc2": "With spacious, elegant interiors and managers with over 10 years of experience, we provide tailored hospitality matching your preferred choice style, ideal partner type, and personality.",
+    "badge1": "60 Private Rooms",
+    "badge2": "200+ Daily Staff",
+    "badge3": "10+ Yrs Experience"
+  },
+  "system": {
+    "label": "SYSTEM & RULES",
+    "title": "AK Dalto System Guide",
+    "subtitle": "All rates and operating rules are strictly managed under transparent fixed pricing.",
+    "items": [
+      {
+        "title": "Transparent Pricing System",
+        "desc": "No surprise fees. Clear fixed pricing for base liquor and hourly TC rates."
+      },
+      {
+        "title": "Tailored Hospitality Staff",
+        "desc": "Experienced staff selected to match your party's mood and preferences."
+      },
+      {
+        "title": "Early Bird Discount",
+        "desc": "Enjoy a ₩50,000 discount on base liquor when visiting before 9 PM."
+      },
+      {
+        "title": "1:1 Care & Valet Parking",
+        "desc": "Dedicated manager service with convenient valet parking upon arrival."
+      }
+    ]
+  },
+  "guide": {
+    "label": "HOW TO VISIT",
+    "title": "Step-by-Step Guide",
+    "subtitle": "A simple 4-step guide to make your visit effortless.",
+    "steps": [
+      {
+        "step": "STEP 01",
+        "title": "Call or Online Inquiry",
+        "desc": "Let us know your arrival time, group size, and preferred party style."
+      },
+      {
+        "step": "STEP 02",
+        "title": "Arrival & Valet Parking",
+        "desc": "Arrive at 604-11 Yeoksam-dong for valet support and private room guidance."
+      },
+      {
+        "step": "STEP 03",
+        "title": "Liquor & Staff Service",
+        "desc": "Enjoy base drinks, premium liquor options, and attentive staff care."
+      },
+      {
+        "step": "STEP 04",
+        "title": "Relax & Enjoy",
+        "desc": "Settle with clear pricing and enjoy a smooth, pleasant night from start to finish."
+      }
+    ]
+  },
+  "who_is_it_for": {
+    "label": "WHO IS IT FOR",
+    "title": "Who Is This For?",
+    "subtitle": "AK Dalto is highly recommended for guests who value comfort and seamless service.",
+    "targets": [
+      {
+        "title": "Corporate VIP Entertainment",
+        "desc": "Flawless hospitality for important business partners and VIP guests."
+      },
+      {
+        "title": "Company Dinners & After-Parties",
+        "desc": "Ideal for group gatherings with comfortable private rooms and fixed rates."
+      },
+      {
+        "title": "Birthdays & Celebrations",
+        "desc": "Make special occasions and parties with friends even more enjoyable."
+      },
+      {
+        "title": "Solo Travelers & Guests",
+        "desc": "Feel completely comfortable coming alone with warm, welcoming guidance."
+      }
+    ]
+  },
+  "why_us": {
+    "label": "WHY US",
+    "title": "Why Choose AK Dalto",
+    "subtitle": "Comfort over flashiness, experience over novelty. There's a reason guests keep coming back.",
+    "features": [
+      {
+        "num": "01",
+        "title": "Proven Expertise",
+        "desc": "A stable, well-oiled system built from years of experience. Everything runs smoothly from start to finish."
+      },
+      {
+        "num": "02",
+        "title": "Seasoned & Relaxed Service",
+        "desc": "Skilled over eager. The right fit for guests who prefer a relaxed, comfortable atmosphere."
+      },
+      {
+        "num": "03",
+        "title": "Transparent Fixed Pricing",
+        "desc": "Base charge ₩150,000, with ₩50,000 off before 9PM. No hidden fees — fully transparent pricing."
+      },
+      {
+        "num": "04",
+        "title": "Open 365 Days",
+        "desc": "We operate from 6PM to 3AM the next day, every day of the year. Contact us anytime."
+      },
+      {
+        "num": "05",
+        "title": "Easy to Access",
+        "desc": "3-5 min walk from Sinnonhyeon Station Exit 4, 8 min from Gangnam Station Exit 11."
+      }
+    ]
+  },
+  "pricing": {
+    "label": "PRICING & CALCULATOR",
+    "title": "Pricing & Estimated Cost Calculator",
+    "subtitle": "We operate under a transparent fixed rate. Calculate your estimated cost in real-time.",
+    "base": "Base Liquor Set",
+    "base_price": "150,000",
+    "base_unit": "KRW (Whiskey + Snacks + Drinks)",
+    "discount": "Early Bird Discount",
+    "discount_desc": "When visiting before 9 PM",
+    "discount_price": "100,000 KRW",
+    "tc_girl": "Female Partner Rate (TC)",
+    "tc_girl_price": "120,000 / 150,000 KRW",
+    "tc_boy": "Male Partner Rate (Host)",
+    "tc_boy_price": "70,000 KRW / Hour",
+    "rt_room": "Room Fee (RT)",
+    "rt_room_price": "50,000 KRW",
+    "calculator_title": "💡 Live Cost Calculator",
+    "calc_people": "Guests Count",
+    "calc_time_slot": "Arrival Time",
+    "calc_early": "Before 9PM (50k OFF)",
+    "calc_normal": "After 9PM (Regular Rate)",
+    "calc_partner_type": "Partner Preference",
+    "calc_partner_girl": "Female Host (1st 120k / Ext 150k)",
+    "calc_partner_boy": "Male Host (TC 70k)",
+    "calc_partner_none": "No Partner (Liquor Only)",
+    "calc_hours": "Duration (Hours)",
+    "calc_estimated_total": "Estimated Total",
+    "calc_note": "* Final prices may vary slightly based on specific reservations. Please call for exact details."
+  },
+  "access": {
+    "label": "ACCESS & MAP",
+    "title": "Location & Directions",
+    "address": "604-11 Yeoksam-dong, Gangnam-gu, Seoul",
+    "copy_address": "Copy Address",
+    "copied": "Copied!",
+    "hours": "Operating Hours: Every day 18:00 - Next day 15:00 (Open 365 days)",
+    "nav_kakao": "KakaoMap Directions",
+    "nav_naver": "Naver Map Directions",
+    "subway": [
+      "2-3 min walk from Sinnonhyeon Station Exit 4 (Line 9 / Shinbundang)",
+      "8 min walk from Gangnam Station Exit 11 (Line 2)",
+      "5 min walk from Eonju Station Exit 4 (Line 9)"
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "How do I make a reservation?",
+        "a": "Please call us or use the online reservation form. Tell us your date, group size, and preferred room style for custom guidance."
+      },
+      {
+        "q": "What is the base price?",
+        "a": "Base liquor is ₩150,000, and ₩100,000 if visiting before 9 PM. TC and room fees are calculated based on hours and guests."
+      },
+      {
+        "q": "What are the opening hours?",
+        "a": "We are open 365 days a year, from 6 PM to 3 PM the next day."
+      },
+      {
+        "q": "How do I get there?",
+        "a": "Located at 604-11 Yeoksam-dong, Gangnam-gu, Seoul. 3-5 min walk from Sinnonhyeon Station Exit 4."
+      },
+      {
+        "q": "Do you accept foreign guests?",
+        "a": "Yes! English guidance is available, and foreign VIP guests are welcome."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Book Your Room Today",
+    "subtitle": "Easily reserve via phone or online form.",
+    "call": "Call to Book",
+    "online": "Book Online"
+  },
+  "footer": {
+    "address": "604-11 Yeoksam-dong, Gangnam-gu, Seoul",
+    "hours": "Daily 18:00 - 15:00 Next Day",
+    "copyright": "© 2025 AK Dalto. All rights reserved."
+  }
+}
