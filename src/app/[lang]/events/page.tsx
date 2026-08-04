@@ -14,7 +14,7 @@ export default async function EventsPage({ params }: Props) {
   const ev = dict.events
 
   return (
-    <main className="mx-auto w-full max-w-[1440px] px-3 py-10 sm:px-5 md:py-16">
+    <main className="mx-auto w-full max-w-[1440px] px-4 py-10 sm:px-8 md:px-12 lg:px-16 md:py-16">
       {/* Page Header Hero */}
       <section className="glass-card relative overflow-hidden rounded-3xl p-8 md:p-14">
         {/* Glow effect */}

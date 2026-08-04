@@ -20,7 +20,7 @@ export function CtaSection({ dict, lang }: Props) {
   }
 
   return (
-    <section className="scroll-reveal px-3 pt-16 pb-20 sm:px-5 md:pt-28 lg:pt-32">
+    <section className="scroll-reveal px-4 pt-16 pb-20 sm:px-8 md:px-12 lg:px-16 md:pt-28 lg:pt-32">
       {/* Big Address & Map Container */}
       <div className="glass-card overflow-hidden rounded-3xl">
         {/* Top gradient accent line */}

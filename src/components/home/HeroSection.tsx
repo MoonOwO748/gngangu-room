@@ -9,7 +9,7 @@ export function HeroSection({ dict, lang }: Props) {
   const h = dict.hero
 
   return (
-    <section className="px-3 pt-3 sm:px-5 sm:pt-5">
+    <section className="px-4 pt-3 sm:px-8 md:px-12 lg:px-16 sm:pt-5">
       <div
         className="relative flex min-h-[88svh] flex-col overflow-hidden rounded-3xl md:min-h-[90svh]"
         style={{ background: 'var(--surface)' }}

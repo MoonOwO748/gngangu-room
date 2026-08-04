@@ -11,7 +11,7 @@ export function FaqSection({ dict }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section className="scroll-reveal px-3 pt-16 sm:px-5 md:pt-28 lg:pt-32">
+    <section className="scroll-reveal px-4 pt-16 sm:px-8 md:px-12 lg:px-16 md:pt-28 lg:pt-32">
       <header className="max-w-3xl">
         <div className="flex items-center gap-3">
           <span className="accent-line" />

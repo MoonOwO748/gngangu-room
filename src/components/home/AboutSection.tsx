@@ -14,7 +14,7 @@ export function AboutSection({ dict }: Props) {
   ]
 
   return (
-    <section className="scroll-reveal px-3 pt-16 sm:px-5 md:pt-28 lg:pt-32">
+    <section className="scroll-reveal px-4 pt-16 sm:px-8 md:px-12 lg:px-16 md:pt-28 lg:pt-32">
       <div className="glass-card relative overflow-hidden rounded-3xl p-6 md:p-12 lg:p-14">
         {/* Ambient background glow */}
         <div

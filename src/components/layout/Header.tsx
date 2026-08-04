@@ -30,7 +30,7 @@ export function Header({ dict, lang }: Props) {
   ]
 
   return (
-    <header className="mx-auto w-full max-w-[1440px] px-3 pt-3 sm:px-5 sm:pt-5">
+    <header className="mx-auto w-full max-w-[1440px] px-4 pt-3 sm:px-8 md:px-12 lg:px-16 sm:pt-5">
       <div
         className="relative flex items-center justify-between rounded-full border py-2 pl-4 pr-3 md:py-2.5 md:pl-5 md:pr-3"
         style={{

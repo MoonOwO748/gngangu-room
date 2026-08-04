@@ -12,7 +12,7 @@ export default async function ReservePage({ params }: Props) {
   const dict = await getDictionary(lang)
 
   return (
-    <div className="px-3 py-16 sm:px-5 md:py-24">
+    <div className="px-4 py-16 sm:px-8 md:px-12 lg:px-16 md:py-24">
       <div className="mx-auto max-w-2xl">
         <p className="text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: 'var(--gold)' }}>
           RESERVATION
