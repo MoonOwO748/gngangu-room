@@ -84,10 +84,6 @@ export default async function BlogPage({ params }: Props) {
         </div>
       </section>
 
-      {/* WordPress Connect Notice Box */}
-      <section className="mt-12 glass-card rounded-2xl p-6 text-center text-xs text-bone-mute">
-        💡 워드프레스(WordPress) 연동을 위해서는 <code className="text-accent bg-black/40 px-2 py-1 rounded">.env.local</code> 파일에 <code className="text-accent bg-black/40 px-2 py-1 rounded">NEXT_PUBLIC_WORDPRESS_URL=https://귀하의-워드프레스-주소.com</code>을 설정해 주시면 자동으로 실시간 글이 연동됩니다.
-      </section>
 
       {/* CTA Box */}
       <section
