@@ -57,17 +57,26 @@ export function CtaSection({ dict, lang }: Props) {
                   className="inline-flex items-center gap-2 rounded-xl border px-5 py-3 text-xs font-bold transition-all hover:scale-[1.02] hover:bg-white/10"
                   style={{ borderColor: 'rgba(212,149,106,0.3)', background: 'rgba(212,149,106,0.1)', color: 'var(--bone)' }}
                 >
-                  <span>📋 {copied ? a.copied : a.copy_address}</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ color: 'var(--accent)' }}>
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                  </svg>
+                  <span>{copied ? a.copied : a.copy_address}</span>
                 </button>
 
                 <a
-                  href="https://map.kakao.com/link/search/서울 강남구 역삼동 604-11"
+                  href="https://map.kakao.com/?q=서울 강남구 역삼동 604-11"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl border px-4 py-3 text-xs font-semibold transition-all hover:scale-[1.02] hover:bg-white/5"
                   style={{ borderColor: 'var(--border)', color: 'var(--bone-dim)' }}
                 >
-                  🗺️ {a.nav_kakao}
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                    <polyline points="2 17 12 22 22 17"/>
+                    <polyline points="2 12 12 17 22 12"/>
+                  </svg>
+                  {a.nav_kakao}
                 </a>
 
                 <a
@@ -77,7 +86,11 @@ export function CtaSection({ dict, lang }: Props) {
                   className="inline-flex items-center gap-2 rounded-xl border px-4 py-3 text-xs font-semibold transition-all hover:scale-[1.02] hover:bg-white/5"
                   style={{ borderColor: 'var(--border)', color: 'var(--bone-dim)' }}
                 >
-                  📍 {a.nav_naver}
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  {a.nav_naver}
                 </a>
               </div>
 
@@ -87,7 +100,17 @@ export function CtaSection({ dict, lang }: Props) {
                 <ul className="flex flex-col gap-2">
                   {a.subway.map((s, i) => (
                     <li key={i} className="flex items-start gap-2.5 text-xs md:text-sm" style={{ color: 'var(--bone-dim)' }}>
-                      <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center text-[10px]">🚇</span>
+                      <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <rect x="4" y="3" width="16" height="13" rx="2"/>
+                          <path d="M4 11h16"/>
+                          <path d="M12 3v8"/>
+                          <path d="M8 19l-3 3"/>
+                          <path d="M16 19l3 3"/>
+                          <circle cx="8" cy="15" r="1"/>
+                          <circle cx="16" cy="15" r="1"/>
+                        </svg>
+                      </span>
                       {s}
                     </li>
                   ))}
@@ -101,18 +124,21 @@ export function CtaSection({ dict, lang }: Props) {
                 {/* Embed Map View */}
                 <iframe
                   title="AK 달토 오시는길 지도"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.340058863618!2d127.0264024!3d37.5045464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1593c66f91f%3A0x6b6330089f2142e0!2z7ISc7Jq47I-EIOqwleyCqOq1rCDrk7zsgqzrj5kgNjA0LTEx!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr"
+                  src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%97%AD%EC%82%BC%EB%8F%99%20604-11&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
-                  style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(1.1)' }}
+                  style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
                 />
 
                 {/* Map Overlay Badge */}
-                <div className="absolute left-4 top-4 rounded-xl border px-3.5 py-2 text-xs font-bold shadow-lg backdrop-blur-md" style={{ borderColor: 'rgba(212,149,106,0.3)', background: 'rgba(10,10,14,0.85)', color: 'var(--bone)' }}>
-                  📍 강남 AK 달토 (역삼동 604-11)
+                <div className="absolute left-4 top-4 flex items-center gap-2 rounded-xl border px-3.5 py-2 text-xs font-bold shadow-lg backdrop-blur-md" style={{ borderColor: 'rgba(212,149,106,0.3)', background: 'rgba(10,10,14,0.85)', color: 'var(--bone)' }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ color: 'var(--accent)' }}>
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  강남 AK 달토 (역삼동 604-11)
                 </div>
               </div>
             </div>

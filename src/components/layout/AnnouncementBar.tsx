@@ -30,7 +30,11 @@ export function AnnouncementBar({ dict, lang }: Props) {
                 aria-hidden={i > 0}
                 className="flex items-center gap-2 whitespace-nowrap pr-10 text-xs font-semibold text-white sm:text-sm"
               >
-                <span aria-hidden="true" className="text-white/70">✦</span>
+                <span aria-hidden="true" className="flex items-center text-white/70">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                </span>
                 {t}
               </span>
             ))}

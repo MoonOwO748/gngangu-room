@@ -1,9 +1,12 @@
-import type { PageProps } from 'next/types'
 import { notFound } from 'next/navigation'
 import { hasLocale, getDictionary } from '../dictionaries'
 import Link from 'next/link'
 
-export default async function ReservePage({ params }: PageProps<'/[lang]/reserve'>) {
+interface Props {
+  params: Promise<{ lang: string }>
+}
+
+export default async function ReservePage({ params }: Props) {
   const { lang } = await params
   if (!hasLocale(lang)) notFound()
   const dict = await getDictionary(lang)

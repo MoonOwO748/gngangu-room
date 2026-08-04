@@ -144,3 +144,18 @@ body {
 ::-webkit-scrollbar-track { background: var(--ink); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ── Kakao Map Roughmap Overrides ── */
+.root_daum_roughmap {
+  width: 100% !important;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.root_daum_roughmap .wrap_map {
+  height: 380px !important;
+}
+.root_daum_roughmap .hide {
+  display: none !important;
+}
+

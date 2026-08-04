@@ -21,12 +21,12 @@ export function Header({ dict, lang }: Props) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const navLinks = [
-    { href: `/${lang}/rooms`,   label: dict.nav.rooms },
     { href: `/${lang}/pricing`, label: dict.nav.pricing },
     { href: `/${lang}/events`,  label: dict.nav.events },
     { href: `/${lang}/howto`,   label: dict.nav.howto },
     { href: `/${lang}/access`,  label: dict.nav.access },
     { href: `/${lang}/faq`,     label: dict.nav.faq },
+    { href: `/${lang}/blog`,    label: dict.nav.blog },
   ]
 
   return (

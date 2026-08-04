@@ -12,12 +12,12 @@ interface Props {
 
 export function Footer({ dict, lang }: Props) {
   const navLinks = [
-    { href: `/${lang}/rooms`,   label: dict.nav.rooms },
     { href: `/${lang}/pricing`, label: dict.nav.pricing },
     { href: `/${lang}/events`,  label: dict.nav.events },
     { href: `/${lang}/howto`,   label: dict.nav.howto },
     { href: `/${lang}/access`,  label: dict.nav.access },
     { href: `/${lang}/faq`,     label: dict.nav.faq },
+    { href: `/${lang}/blog`,    label: dict.nav.blog },
   ]
 
   const scrollToTop = () => {
@@ -100,13 +100,19 @@ export function Footer({ dict, lang }: Props) {
             <ul className="mt-4 flex flex-col gap-3 text-sm">
               <li className="flex items-start gap-3" style={{ color: 'var(--bone-dim)' }}>
                 <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md" style={{ background: 'rgba(212,149,106,0.1)', color: 'var(--accent)' }}>
-                  📍
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
                 </span>
                 <span>{dict.footer.address}</span>
               </li>
               <li className="flex items-start gap-3" style={{ color: 'var(--bone-dim)' }}>
                 <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md" style={{ background: 'rgba(212,149,106,0.1)', color: 'var(--accent)' }}>
-                  🕒
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
                 </span>
                 <span>{dict.footer.hours}</span>
               </li>

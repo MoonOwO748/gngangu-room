@@ -36,7 +36,11 @@ export function AboutSection({ dict }: Props) {
             {a.title}
           </h2>
           <span className="inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-xs font-bold shrink-0" style={{ borderColor: 'rgba(212,149,106,0.3)', background: 'rgba(212,149,106,0.1)', color: 'var(--accent-bright)' }}>
-            📍 삼정호텔 (역삼동 604-11)
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            삼정호텔 (역삼동 604-11)
           </span>
         </div>
 
@@ -68,7 +72,10 @@ export function AboutSection({ dict }: Props) {
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
           <div className="rounded-2xl border p-6 md:p-8" style={{ borderColor: 'rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.02)' }}>
             <h4 className="flex items-center gap-2 text-base font-bold" style={{ color: 'var(--bone)' }}>
-              <span style={{ color: 'var(--accent)' }}>✦</span> 강남 대표 하이퍼블릭 공간
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--accent)' }} aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              강남 대표 하이퍼블릭 공간
             </h4>
             <p className="mt-3 text-sm leading-relaxed" style={{ color: 'var(--bone-dim)' }}>
               {a.desc1}
@@ -77,7 +84,10 @@ export function AboutSection({ dict }: Props) {
 
           <div className="rounded-2xl border p-6 md:p-8" style={{ borderColor: 'rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.02)' }}>
             <h4 className="flex items-center gap-2 text-base font-bold" style={{ color: 'var(--bone)' }}>
-              <span style={{ color: 'var(--accent)' }}>✦</span> 1:1 디테일 맞춤 서비스
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--accent)' }} aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              1:1 디테일 맞춤 서비스
             </h4>
             <p className="mt-3 text-sm leading-relaxed" style={{ color: 'var(--bone-dim)' }}>
               {a.desc2}

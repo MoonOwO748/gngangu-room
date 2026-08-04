@@ -1,7 +1,11 @@
 import type { Metadata } from 'next'
-import type { LayoutProps } from 'next/types'
 import { notFound } from 'next/navigation'
 import { Noto_Sans_KR, Noto_Sans_SC, Noto_Sans_JP } from 'next/font/google'
+
+interface LayoutProps {
+  children: React.ReactNode
+  params: Promise<{ lang: string }>
+}
 import { hasLocale, locales, getDictionary } from './dictionaries'
 import { AnnouncementBar } from '@/components/layout/AnnouncementBar'
 import { Header } from '@/components/layout/Header'
@@ -42,7 +46,7 @@ export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }))
 }
 
-export async function generateMetadata({ params }: LayoutProps<'/[lang]'>): Promise<Metadata> {
+export async function generateMetadata({ params }: Omit<LayoutProps, 'children'>): Promise<Metadata> {
   const { lang } = await params
   const m = metaByLocale[lang] ?? metaByLocale.ko
 
@@ -77,7 +81,7 @@ export async function generateMetadata({ params }: LayoutProps<'/[lang]'>): Prom
   }
 }
 
-export default async function LocaleLayout({ children, params }: LayoutProps<'/[lang]'>) {
+export default async function LocaleLayout({ children, params }: LayoutProps) {
   const { lang } = await params
   if (!hasLocale(lang)) notFound()
 

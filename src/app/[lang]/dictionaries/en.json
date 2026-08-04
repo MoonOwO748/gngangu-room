@@ -6,6 +6,8 @@
     "howto": "How to Visit",
     "access": "Location",
     "faq": "FAQ",
+    "blog": "Blog & News",
+    "reviews": "Reviews",
     "reserve": "Online Reservation",
     "international": "For Tourists",
     "open_menu": "Open Menu",
@@ -156,7 +158,7 @@
     "tc_boy_price": "70,000 KRW / Hour",
     "rt_room": "Room Fee (RT)",
     "rt_room_price": "50,000 KRW",
-    "calculator_title": "💡 Live Cost Calculator",
+    "calculator_title": "Live Cost Calculator",
     "calc_people": "Guests Count",
     "calc_time_slot": "Arrival Time",
     "calc_early": "Before 9PM (50k OFF)",
@@ -208,6 +210,59 @@
         "q": "Do you accept foreign guests?",
         "a": "Yes! English guidance is available, and foreign VIP guests are welcome."
       }
+    ]
+  },
+  "events": {
+    "label": "EVENTS & PROMOTIONS",
+    "title": "Events & Promotions",
+    "subtitle": "Check out special offers currently available at AK Dalto.",
+    "items": [
+      {
+        "badge": "ONGOING",
+        "title": "Early Bird Discount",
+        "desc": "Get ₩50,000 off the base liquor when visiting before 9 PM! Arrive early for the best value.",
+        "highlight": "₩50,000 OFF"
+      },
+      {
+        "badge": "GROUPS",
+        "title": "Group Dining Package",
+        "desc": "For groups of 5 or more, our dedicated manager will arrange a custom room setup and curated drink selection. Call for details.",
+        "highlight": "Custom Quote"
+      },
+      {
+        "badge": "VIP",
+        "title": "Business VIP Program",
+        "desc": "Premium room arrangements, dedicated manager assignment, and bespoke drink service for important business entertainment.",
+        "highlight": "Dedicated Manager"
+      },
+      {
+        "badge": "FIRST VISIT",
+        "title": "First-Timer Welcome Guide",
+        "desc": "First-time guests receive a thorough walkthrough of our system, pricing, and services. Feel free to ask anything.",
+        "highlight": "1:1 Guidance"
+      }
+    ],
+    "cta_text": "Inquire About Events",
+    "cta_note": "* Events are subject to change. Please call for the latest information."
+  },
+  "howto": {
+    "label": "HOW TO USE",
+    "title": "Detailed Usage Guide",
+    "subtitle": "A comprehensive guide to make first-time visitors feel completely at ease.",
+    "dress_title": "Dress Code",
+    "dress_desc": "Smart casual is perfectly fine. There's no strict dress code, but neat attire is recommended.",
+    "parking_title": "Parking",
+    "parking_desc": "Parking is available at the Samjung Hotel building. Valet parking service is also provided.",
+    "payment_title": "Payment",
+    "payment_desc": "We accept cash, credit cards, and debit cards. Detailed receipts are provided at checkout.",
+    "age_title": "Age Requirement",
+    "age_desc": "Guests must be 19 years or older. ID verification may be requested.",
+    "tips_title": "Helpful Tips",
+    "tips": [
+      "Calling ahead ensures smoother room and time slot assignments.",
+      "Let us know early if your group size changes so we can adjust the room setup.",
+      "Feel free to share your preferred vibe and style with your assigned manager.",
+      "Business hours are 6 PM to 3 PM the next day, 365 days a year."
     ]
   },
   "cta": {

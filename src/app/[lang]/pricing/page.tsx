@@ -1,10 +1,13 @@
-import type { PageProps } from 'next/types'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { hasLocale, getDictionary } from '../dictionaries'
 import { PricingSection } from '@/components/home/PricingSection'
 
-export default async function PricingPage({ params }: PageProps<'/[lang]'>) {
+interface Props {
+  params: Promise<{ lang: string }>
+}
+
+export default async function PricingPage({ params }: Props) {
   const { lang } = await params
   if (!hasLocale(lang)) notFound()
 
@@ -39,18 +42,23 @@ export default async function PricingPage({ params }: PageProps<'/[lang]'>) {
           </p>
 
           {/* Key perks pill list */}
+          {/* Key perks pill list */}
           <div className="mt-6 flex flex-wrap gap-2.5">
-            <span className="rounded-xl border px-3.5 py-1.5 text-xs font-bold" style={{ borderColor: 'rgba(212,149,106,0.3)', background: 'rgba(212,149,106,0.1)', color: 'var(--accent-bright)' }}>
-              ✓ 기본 주대 ₩150,000
+            <span className="inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-1.5 text-xs font-bold" style={{ borderColor: 'rgba(212,149,106,0.3)', background: 'rgba(212,149,106,0.1)', color: 'var(--accent-bright)' }}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              기본 주대 ₩150,000
             </span>
-            <span className="rounded-xl border px-3.5 py-1.5 text-xs font-bold" style={{ borderColor: 'rgba(212,149,106,0.3)', background: 'rgba(212,149,106,0.1)', color: 'var(--accent-bright)' }}>
-              ✓ 9시 이전 ₩50,000 할인
+            <span className="inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-1.5 text-xs font-bold" style={{ borderColor: 'rgba(212,149,106,0.3)', background: 'rgba(212,149,106,0.1)', color: 'var(--accent-bright)' }}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              9시 이전 ₩50,000 할인
             </span>
-            <span className="rounded-xl border px-3.5 py-1.5 text-xs font-bold" style={{ borderColor: 'rgba(212,149,106,0.3)', background: 'rgba(212,149,106,0.1)', color: 'var(--accent-bright)' }}>
-              ✓ 아가씨 TC ₩120,000 / 연장 ₩150,000
+            <span className="inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-1.5 text-xs font-bold" style={{ borderColor: 'rgba(212,149,106,0.3)', background: 'rgba(212,149,106,0.1)', color: 'var(--accent-bright)' }}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              아가씨 TC ₩120,000 / 연장 ₩150,000
             </span>
-            <span className="rounded-xl border px-3.5 py-1.5 text-xs font-bold" style={{ borderColor: 'rgba(212,149,106,0.3)', background: 'rgba(212,149,106,0.1)', color: 'var(--accent-bright)' }}>
-              ✓ 선수 TC ₩70,000
+            <span className="inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-1.5 text-xs font-bold" style={{ borderColor: 'rgba(212,149,106,0.3)', background: 'rgba(212,149,106,0.1)', color: 'var(--accent-bright)' }}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              선수 TC ₩70,000
             </span>
           </div>
         </div>
@@ -78,8 +86,10 @@ export default async function PricingPage({ params }: PageProps<'/[lang]'>) {
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <div className="glass-card rounded-2xl p-6 md:p-8">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl text-lg" style={{ background: 'rgba(212,149,106,0.1)', color: 'var(--accent)' }}>
-              🛡️
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl" style={{ background: 'rgba(212,149,106,0.1)', color: 'var(--accent)' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
             </span>
             <h3 className="mt-4 text-base font-bold" style={{ color: 'var(--bone)' }}>추가금 0원 원칙</h3>
             <p className="mt-2 text-xs leading-relaxed" style={{ color: 'var(--bone-dim)' }}>
@@ -88,8 +98,11 @@ export default async function PricingPage({ params }: PageProps<'/[lang]'>) {
           </div>
 
           <div className="glass-card rounded-2xl p-6 md:p-8">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl text-lg" style={{ background: 'rgba(212,149,106,0.1)', color: 'var(--accent)' }}>
-              ⏰
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl" style={{ background: 'rgba(212,149,106,0.1)', color: 'var(--accent)' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
             </span>
             <h3 className="mt-4 text-base font-bold" style={{ color: 'var(--bone)' }}>얼리버드 할인 혜택</h3>
             <p className="mt-2 text-xs leading-relaxed" style={{ color: 'var(--bone-dim)' }}>
@@ -98,8 +111,10 @@ export default async function PricingPage({ params }: PageProps<'/[lang]'>) {
           </div>
 
           <div className="glass-card rounded-2xl p-6 md:p-8">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl text-lg" style={{ background: 'rgba(212,149,106,0.1)', color: 'var(--accent)' }}>
-              📞
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl" style={{ background: 'rgba(212,149,106,0.1)', color: 'var(--accent)' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.07 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
             </span>
             <h3 className="mt-4 text-base font-bold" style={{ color: 'var(--bone)' }}>사전 견적 확인 서비스</h3>
             <p className="mt-2 text-xs leading-relaxed" style={{ color: 'var(--bone-dim)' }}>
@@ -108,8 +123,11 @@ export default async function PricingPage({ params }: PageProps<'/[lang]'>) {
           </div>
 
           <div className="glass-card rounded-2xl p-6 md:p-8">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl text-lg" style={{ background: 'rgba(212,149,106,0.1)', color: 'var(--accent)' }}>
-              💳
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl" style={{ background: 'rgba(212,149,106,0.1)', color: 'var(--accent)' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="5" width="20" height="14" rx="2"/>
+                <line x1="2" y1="10" x2="22" y2="10"/>
+              </svg>
             </span>
             <h3 className="mt-4 text-base font-bold" style={{ color: 'var(--bone)' }}>정직한 정산 시스템</h3>
             <p className="mt-2 text-xs leading-relaxed" style={{ color: 'var(--bone-dim)' }}>
