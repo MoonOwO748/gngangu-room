@@ -79,7 +79,7 @@ export async function getBlogPosts(): Promise<WPPost[]> {
     {
       id: '3',
       slug: 'group-party-karaoke-recommendation',
-      title: '강남 회식 & 2차 모임 장소 추천: AK 달토 60개 룸 인프라',
+      title: '강남 회식 & 2차 모임 장소 추천: 강남 달토 60개 룸 인프라',
       excerpt: '대규모 단체 인원도 여유롭게 수용 가능한 역삼동 프라이빗 룸과 회식 전용 주류 세트 구성 안내.',
       date: '2025-07-20',
       category: '모임안내',

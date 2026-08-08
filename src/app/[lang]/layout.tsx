@@ -10,6 +10,7 @@ import { hasLocale, locales, getDictionary } from './dictionaries'
 import { AnnouncementBar } from '@/components/layout/AnnouncementBar'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { FloatingCta } from '@/components/layout/FloatingCta'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 
 const notoKR = Noto_Sans_KR({ subsets: ['latin'], weight: ['300','400','500','600','700'], variable: '--font-noto-kr', display: 'swap' })
@@ -146,6 +147,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
           <main className="flex-1">{children}</main>
         </div>
         <Footer dict={dict} lang={lang} />
+        <FloatingCta lang={lang} />
       </body>
     </html>
   )

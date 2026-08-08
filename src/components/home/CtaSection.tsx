@@ -124,7 +124,7 @@ export function CtaSection({ dict, lang }: Props) {
               <div className="relative h-[320px] w-full overflow-hidden rounded-2xl border md:h-[400px]" style={{ borderColor: 'rgba(255,255,255,0.1)' }}>
                 {/* Embed Map View */}
                 <iframe
-                  title="AK 달토 오시는길 지도"
+                  title="강남 달토 오시는길 지도"
                   src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%97%AD%EC%82%BC%EB%8F%99%20604-11&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
@@ -139,7 +139,7 @@ export function CtaSection({ dict, lang }: Props) {
                     <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/>
                     <circle cx="12" cy="10" r="3"/>
                   </svg>
-                  강남 AK 달토 (역삼동 604-11)
+                  강남 달토 (역삼동 604-11)
                 </div>
               </div>
             </div>
