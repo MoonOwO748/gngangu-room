@@ -235,7 +235,7 @@ export default function AccessPageClient({ dict, lang }: Props) {
               </span>
             </div>
             <iframe
-              title="Google Map - 강남 달토"
+              title="Google Map - AK Dalto"
               src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%97%AD%EC%82%BC%EB%8F%99%20604-11&t=&z=16&ie=UTF8&iwloc=&output=embed"
               className="h-[380px] w-full rounded-xl border-0 md:h-[420px]"
               loading="lazy"

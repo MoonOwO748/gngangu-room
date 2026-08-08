@@ -109,7 +109,7 @@ export function PricingSection({ dict, className, hideHeader = false }: Props) {
       </div>
 
       {/* Interactive Live Price Calculator */}
-      <div id="calculator" className="glass-card mt-10 rounded-3xl p-6 md:p-10" style={{ borderColor: 'rgba(212,149,106,0.25)', background: 'linear-gradient(145deg, rgba(26,26,34,0.95), rgba(19,19,24,0.95))' }}>
+      <div className="glass-card mt-10 rounded-3xl p-6 md:p-10" style={{ borderColor: 'rgba(212,149,106,0.25)', background: 'linear-gradient(145deg, rgba(26,26,34,0.95), rgba(19,19,24,0.95))' }}>
         <div className="flex flex-col justify-between gap-4 border-b pb-6 md:flex-row md:items-center" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
           <div>
             <h3 className="text-xl font-bold tracking-tight md:text-2xl" style={{ color: 'var(--bone)' }}>

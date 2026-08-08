@@ -34,7 +34,7 @@ export default async function BlogPage({ params }: Props) {
           </div>
 
           <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl lg:text-6xl" style={{ color: 'var(--bone)' }}>
-            강남 달토 소식 & 블로그
+            AK 달토 소식 & 블로그
           </h1>
 
           <p className="mt-4 text-sm leading-relaxed md:text-base" style={{ color: 'var(--bone-dim)' }}>
