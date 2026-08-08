@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import type { getDictionary } from '@/app/[lang]/dictionaries'
 
+import { siteConfig } from '@/config/site'
+
 type Dict = Awaited<ReturnType<typeof getDictionary>>
 
 interface Props {
@@ -50,14 +52,14 @@ export function Footer({ dict, lang }: Props) {
               </span>
             </div>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl" style={{ color: 'var(--bone)' }}>
-              AK DALTO
+              {siteConfig.altName.toUpperCase()}
             </h2>
           </div>
 
           {/* Quick Call Pill */}
           <div className="flex items-center gap-3">
             <a
-              href="tel:+821057043097"
+              href={`tel:${siteConfig.phoneRaw}`}
               className="group flex items-center gap-3 rounded-2xl border px-5 py-3.5 transition-all duration-300 hover:border-accent/40 hover:bg-white/5"
               style={{ borderColor: 'var(--border)', background: 'var(--surface)' }}
             >
@@ -71,7 +73,7 @@ export function Footer({ dict, lang }: Props) {
               </div>
               <div>
                 <p className="text-[11px] font-medium uppercase tracking-wider" style={{ color: 'var(--bone-dim)' }}>직통 전화 문의</p>
-                <p className="text-base font-bold tracking-tight" style={{ color: 'var(--bone)' }}>010-5704-3097</p>
+                <p className="text-base font-bold tracking-tight" style={{ color: 'var(--bone)' }}>{siteConfig.phone}</p>
               </div>
             </a>
 
