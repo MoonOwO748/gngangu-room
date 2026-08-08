@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import type { getDictionary } from '@/app/[lang]/dictionaries'
-import { siteConfig } from '@/config/site'
 
 type Dict = Awaited<ReturnType<typeof getDictionary>>
 
@@ -155,7 +154,7 @@ export function CtaSection({ dict, lang }: Props) {
             </p>
             <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
               <a
-                href={`tel:${siteConfig.phoneRaw}`}
+                href="tel:+821057043097"
                 id="cta-call-btn"
                 className="inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 text-sm font-semibold transition-all hover:scale-[1.02] hover:brightness-110 sm:min-w-[180px]"
                 style={{

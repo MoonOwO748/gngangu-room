@@ -4,31 +4,25 @@ import type { getDictionary } from '@/app/[lang]/dictionaries'
 
 type Dict = Awaited<ReturnType<typeof getDictionary>>
 
-interface Props {
-  dict: Dict
-  className?: string
-  hideHeader?: boolean
-}
+interface Props { dict: Dict }
 
-export function FaqSection({ dict, className, hideHeader = false }: Props) {
+export function FaqSection({ dict }: Props) {
   const f = dict.faq
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section className={className ?? "scroll-reveal px-4 pt-16 sm:px-8 md:px-12 lg:px-16 md:pt-28 lg:pt-32"}>
-      {!hideHeader && (
-        <header className="max-w-3xl">
-          <div className="flex items-center gap-3">
-            <span className="accent-line" />
-            <p className="text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: 'var(--accent)' }}>
-              {f.label}
-            </p>
-          </div>
-          <h2 className="mt-4 text-[2.25rem] font-bold leading-[1.05] tracking-tight md:text-5xl" style={{ color: 'var(--bone)' }}>
-            {f.title}
-          </h2>
-        </header>
-      )}
+    <section className="scroll-reveal px-4 pt-16 sm:px-8 md:px-12 lg:px-16 md:pt-28 lg:pt-32">
+      <header className="max-w-3xl">
+        <div className="flex items-center gap-3">
+          <span className="accent-line" />
+          <p className="text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: 'var(--accent)' }}>
+            {f.label}
+          </p>
+        </div>
+        <h2 className="mt-4 text-[2.25rem] font-bold leading-[1.05] tracking-tight md:text-5xl" style={{ color: 'var(--bone)' }}>
+          {f.title}
+        </h2>
+      </header>
 
       {/* FAQ items — card-based instead of divider-based */}
       <div className="mt-10 flex flex-col gap-3">

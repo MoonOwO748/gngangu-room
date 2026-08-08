@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import type { getDictionary } from '@/app/[lang]/dictionaries'
-import { siteConfig } from '@/config/site'
 
 type Dict = Awaited<ReturnType<typeof getDictionary>>
 
@@ -19,8 +18,8 @@ export function HeroSection({ dict, lang }: Props) {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/hero.jpg"
-          alt={`${siteConfig.name} 프리미엄 라운지 외관`}
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center"
+          alt="AK 달토 프리미엄 라운지"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-top"
         />
 
         {/* Dual gradient overlay — warm cinematic tint */}
@@ -49,12 +48,12 @@ export function HeroSection({ dict, lang }: Props) {
               </span>
             </div>
 
-            {/* Title */}
+            {/* Title — larger, with gradient text */}
             <h1
               className="mt-6 text-[2.5rem] font-bold leading-[1.05] tracking-tight md:mt-8 md:text-[3.25rem] lg:text-[4rem]"
               style={{ color: 'var(--bone)' }}
             >
-              {siteConfig.name}
+              {h.title}
             </h1>
 
             {/* Subtitle */}
@@ -62,11 +61,11 @@ export function HeroSection({ dict, lang }: Props) {
               {h.subtitle}
             </p>
 
-            {/* Feature badges */}
+            {/* Feature badges — outlined with accent border */}
             <ul className="mt-7 flex flex-wrap gap-2.5">
-              {[h.badge_price, h.badge_discount, h.badge_fixed, h.badge_hours].filter(Boolean).map((b, i) => (
+              {[h.badge_price, h.badge_discount, h.badge_fixed, h.badge_hours].map((b) => (
                 <li
-                  key={i}
+                  key={b}
                   className="inline-flex items-center rounded-lg border px-3.5 py-1.5 text-xs font-medium"
                   style={{
                     borderColor: 'rgba(212,149,106,0.25)',
@@ -79,10 +78,10 @@ export function HeroSection({ dict, lang }: Props) {
               ))}
             </ul>
 
-            {/* CTA buttons */}
+            {/* CTA buttons — distinct shapes */}
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap md:mt-11">
               <a
-                href={`tel:${siteConfig.phoneRaw}`}
+                href="tel:+821057043097"
                 id="hero-call-btn"
                 className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-xl px-7 py-4 text-sm font-semibold transition-all duration-300 hover:scale-[1.02] hover:brightness-110 sm:min-w-[170px]"
                 style={{
@@ -107,7 +106,7 @@ export function HeroSection({ dict, lang }: Props) {
             </div>
 
             <p className="mt-5 text-sm" style={{ color: 'var(--bone-mute)' }}>
-              {h.urgent} · {siteConfig.phone}
+              {h.urgent} · 010-5704-3097
             </p>
           </div>
         </div>

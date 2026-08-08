@@ -2,36 +2,30 @@ import type { getDictionary } from '@/app/[lang]/dictionaries'
 
 type Dict = Awaited<ReturnType<typeof getDictionary>>
 
-interface Props {
-  dict: Dict
-  className?: string
-  hideHeader?: boolean
-}
+interface Props { dict: Dict }
 
-export function GuideSection({ dict, className, hideHeader = false }: Props) {
+export function GuideSection({ dict }: Props) {
   const g = dict.guide
 
   return (
-    <section className={className ?? "scroll-reveal px-4 pt-16 sm:px-8 md:px-12 lg:px-16 md:pt-28 lg:pt-32"}>
-      {!hideHeader && (
-        <header className="max-w-3xl">
-          <div className="flex items-center gap-3">
-            <span className="accent-line" />
-            <p className="text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: 'var(--accent)' }}>
-              {g.label}
-            </p>
-          </div>
-          <h2 className="mt-4 text-[2.25rem] font-bold leading-[1.05] tracking-tight md:text-5xl" style={{ color: 'var(--bone)' }}>
-            {g.title}
-          </h2>
-          <p className="mt-4 max-w-[33em] text-sm leading-relaxed md:text-base" style={{ color: 'var(--bone-dim)' }}>
-            {g.subtitle}
+    <section className="scroll-reveal px-4 pt-16 sm:px-8 md:px-12 lg:px-16 md:pt-28 lg:pt-32">
+      <header className="max-w-3xl">
+        <div className="flex items-center gap-3">
+          <span className="accent-line" />
+          <p className="text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: 'var(--accent)' }}>
+            {g.label}
           </p>
-        </header>
-      )}
+        </div>
+        <h2 className="mt-4 text-[2.25rem] font-bold leading-[1.05] tracking-tight md:text-5xl" style={{ color: 'var(--bone)' }}>
+          {g.title}
+        </h2>
+        <p className="mt-4 max-w-[33em] text-sm leading-relaxed md:text-base" style={{ color: 'var(--bone-dim)' }}>
+          {g.subtitle}
+        </p>
+      </header>
 
       {/* Timeline Steps Grid */}
-      <div className={`relative ${hideHeader ? 'mt-0' : 'mt-10'} grid gap-4 sm:grid-cols-2 lg:grid-cols-4`}>
+      <div className="relative mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {g.steps.map((s, idx) => (
           <div
             key={idx}

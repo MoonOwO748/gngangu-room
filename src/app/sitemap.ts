@@ -1,8 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { locales } from '@/app/[lang]/dictionaries'
-import { siteConfig } from '@/config/site'
 
-const BASE_URL = siteConfig.url
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ak-dalto.com'
 
 const staticPages = ['', '/rooms', '/pricing', '/events', '/menu', '/howto', '/access', '/faq', '/reserve', '/international']
 

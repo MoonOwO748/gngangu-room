@@ -2,17 +2,12 @@
 
 import { useState } from 'react'
 import type { getDictionary } from '@/app/[lang]/dictionaries'
-import { siteConfig } from '@/config/site'
 
 type Dict = Awaited<ReturnType<typeof getDictionary>>
 
-interface Props {
-  dict: Dict
-  className?: string
-  hideHeader?: boolean
-}
+interface Props { dict: Dict }
 
-export function PricingSection({ dict, className, hideHeader = false }: Props) {
+export function PricingSection({ dict }: Props) {
   const p = dict.pricing
 
   // Calculator State
@@ -28,8 +23,9 @@ export function PricingSection({ dict, className, hideHeader = false }: Props) {
   // Calculate TC Total
   let tcTotal = 0
   if (partnerType === 'girl') {
-    // 아가씨 TC 12만원 (연장 15만원)
-    tcTotal = (120000 + Math.max(0, hours - 1) * 150000) * Math.max(1, people)
+    // 첫 타임 12만원, 이후 연장 타임당 15만원
+    const girlRatePerPerson = 120000 + (hours > 1 ? (hours - 1) * 150000 : 0)
+    tcTotal = girlRatePerPerson * Math.max(1, people)
   } else if (partnerType === 'boy') {
     // 선수 TC 7만원/T
     tcTotal = 70000 * hours * Math.max(1, people)
@@ -39,23 +35,21 @@ export function PricingSection({ dict, className, hideHeader = false }: Props) {
   const estimatedTotal = baseLiquorPrice + tcTotal + roomFee
 
   return (
-    <section className={className ?? "scroll-reveal px-4 pt-16 sm:px-8 md:px-12 lg:px-16 md:pt-28 lg:pt-32"}>
-      {!hideHeader && (
-        <header className="max-w-3xl">
-          <div className="flex items-center gap-3">
-            <span className="accent-line" />
-            <p className="text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: 'var(--accent)' }}>
-              {p.label}
-            </p>
-          </div>
-          <h2 className="mt-4 text-[2.25rem] font-bold leading-[1.05] tracking-tight md:text-5xl" style={{ color: 'var(--bone)' }}>
-            {p.title}
-          </h2>
-          <p className="mt-4 max-w-[33em] text-sm leading-relaxed md:text-base" style={{ color: 'var(--bone-dim)' }}>
-            {p.subtitle}
+    <section className="scroll-reveal px-4 pt-16 sm:px-8 md:px-12 lg:px-16 md:pt-28 lg:pt-32">
+      <header className="max-w-3xl">
+        <div className="flex items-center gap-3">
+          <span className="accent-line" />
+          <p className="text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: 'var(--accent)' }}>
+            {p.label}
           </p>
-        </header>
-      )}
+        </div>
+        <h2 className="mt-4 text-[2.25rem] font-bold leading-[1.05] tracking-tight md:text-5xl" style={{ color: 'var(--bone)' }}>
+          {p.title}
+        </h2>
+        <p className="mt-4 max-w-[33em] text-sm leading-relaxed md:text-base" style={{ color: 'var(--bone-dim)' }}>
+          {p.subtitle}
+        </p>
+      </header>
 
       {/* Main Pricing Cards Grid */}
       <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -260,7 +254,7 @@ export function PricingSection({ dict, className, hideHeader = false }: Props) {
               </div>
 
               <a
-                href={`tel:${siteConfig.phoneRaw}`}
+                href="tel:+821057043097"
                 className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl py-4 text-sm font-semibold transition-all hover:scale-[1.02] hover:brightness-110"
                 style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-bright))', color: 'var(--ink)' }}
               >

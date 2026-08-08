@@ -17,29 +17,27 @@ const notoSC = Noto_Sans_SC({ subsets: ['latin'], weight: ['300','400','500','60
 const notoJP = Noto_Sans_JP({ subsets: ['latin'], weight: ['300','400','500','600','700'], variable: '--font-noto-jp', display: 'swap' })
 
 
-import { siteConfig } from '@/config/site'
-
-const BASE_URL = siteConfig.url
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ak-dalto.com'
 
 const metaByLocale: Record<string, { title: string; description: string; ogLocale: string }> = {
   ko: {
-    title: `${siteConfig.name} 강남 가라오케 공식 | 주대 15만 · 9시 전 5만 할인`,
-    description: `서울 강남구 역삼동 프라이빗 룸 가라오케 ${siteConfig.name}. 기본 주대 15만원, 오후 9시 이전 방문 시 5만원 할인. 신논현역 4번 출구 도보 3분. 365일 연중무휴. 전화 ${siteConfig.phone}.`,
+    title: 'AK 달토 강남 가라오케 공식 | 주대 15만 · 9시 전 5만 할인',
+    description: '서울 강남구 역삼동 프라이빗 룸 가라오케 AK 달토. 기본 주대 15만원, 오후 9시 이전 방문 시 5만원 할인. 신논현역 4번 출구 도보 3분. 365일 연중무휴. 전화 010-5704-3097.',
     ogLocale: 'ko_KR',
   },
   en: {
-    title: `${siteConfig.altName} Gangnam Karaoke | From ₩150,000 · Early Bird Discount`,
-    description: `Premium private karaoke in Yeoksam-dong, Gangnam. Fixed price ₩150,000, ₩50,000 off before 9PM. 3-5 min walk from Sinnonhyeon Station. Open 365 days. Call ${siteConfig.phone}.`,
+    title: 'AK Dalto Gangnam Karaoke | From ₩150,000 · Early Bird Discount',
+    description: 'Premium private karaoke in Yeoksam-dong, Gangnam. Fixed price ₩150,000, ₩50,000 off before 9PM. 3-5 min walk from Sinnonhyeon Station. Open 365 days. Call 010-5704-3097.',
     ogLocale: 'en_US',
   },
   zh: {
-    title: `${siteConfig.altName} 江南KTV官方 | 酒水费15万起 · 21点前到访享折扣`,
-    description: `首尔江南区驿三洞私人包厢KTV。基本酒水费15万韩元，21点前到访享5万韩元优惠。新论岘站4号出口步行3-5分钟。全年365天营业。`,
+    title: 'AK Dalto 江南KTV官方 | 酒水费15万起 · 21点前到访享折扣',
+    description: '首尔江南区驿三洞私人包厢KTV。基本酒水费15万韩元，21点前到访享5万韩元优惠。新论岘站4号出口步行3-5分钟。全年365天营业。',
     ogLocale: 'zh_CN',
   },
   ja: {
-    title: `${siteConfig.altName} 江南カラオケ公式 | 飲み代15万ウォン · 21時前割引`,
-    description: `ソウル江南区駅三洞のプライベートルームカラオケ。基本飲み代15万ウォン、21時前ご来店で5万ウォン割引。新論峴駅4番出口徒歩3〜5分。年中無休。`,
+    title: 'AK Dalto 江南カラオケ公式 | 飲み代15万ウォン · 21時前割引',
+    description: 'ソウル江南区駅三洞のプライベートルームカラオケ。基本飲み代15万ウォン、21時前ご来店で5万ウォン割引。新論峴駅4番出口徒歩3〜5分。年中無休。',
     ogLocale: 'ja_JP',
   },
 }
@@ -53,7 +51,7 @@ export async function generateMetadata({ params }: Omit<LayoutProps, 'children'>
   const m = metaByLocale[lang] ?? metaByLocale.ko
 
   return {
-    title: { default: m.title, template: `%s | ${siteConfig.name}` },
+    title: { default: m.title, template: `%s | AK 달토` },
     description: m.description,
     alternates: {
       canonical: `${BASE_URL}/${lang}`,
@@ -69,10 +67,10 @@ export async function generateMetadata({ params }: Omit<LayoutProps, 'children'>
       title: m.title,
       description: m.description,
       url: `${BASE_URL}/${lang}`,
-      siteName: siteConfig.name,
+      siteName: 'AK 달토',
       locale: m.ogLocale,
       type: 'website',
-      images: [{ url: `${BASE_URL}/og/default.jpg`, width: 1200, height: 630, alt: `${siteConfig.altName} Gangnam Karaoke` }],
+      images: [{ url: `${BASE_URL}/og/default.jpg`, width: 1200, height: 630, alt: 'AK Dalto Gangnam Karaoke' }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -96,16 +94,16 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
         '@type': 'WebSite',
         '@id': `${BASE_URL}/#website`,
         url: BASE_URL,
-        name: siteConfig.altName,
+        name: 'AK Dalto',
         inLanguage: ['ko', 'en', 'zh-CN', 'ja'],
       },
       {
         '@type': 'NightClub',
         '@id': `${BASE_URL}/#business`,
-        name: siteConfig.name,
-        alternateName: [siteConfig.altName, siteConfig.name, 'Gangnam Karaoke', '江南KTV', '江南カラオケ'],
+        name: 'AK 달토',
+        alternateName: ['AK Dalto', 'AK달토', 'Gangnam Karaoke', '江南KTV', '江南カラオケ'],
         url: BASE_URL,
-        telephone: siteConfig.phoneTel,
+        telephone: '+82-10-5704-3097',
         address: {
           '@type': 'PostalAddress',
           streetAddress: '역삼동 604-11',
