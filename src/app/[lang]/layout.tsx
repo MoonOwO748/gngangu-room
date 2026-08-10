@@ -24,23 +24,23 @@ const BASE_URL = siteConfig.url
 
 const metaByLocale: Record<string, { title: string; description: string; ogLocale: string }> = {
   ko: {
-    title: `${siteConfig.name} 강남 가라오케 공식 | 주대 15만 · 9시 전 5만 할인`,
-    description: `서울 강남구 역삼동 프라이빗 룸 가라오케 ${siteConfig.name}. 기본 주대 15만원, 오후 9시 이전 방문 시 5만원 할인. 신논현역 4번 출구 도보 3분. 365일 연중무휴. 전화 ${siteConfig.phone}.`,
+    title: `${siteConfig.name} 강남 가라오케 공식 | 올타임 주대 10만 · 5만 할인 이벤트`,
+    description: `서울 강남구 역삼동 프라이빗 룸 가라오케 ${siteConfig.name}. 기본 주대 올타임 10만원 (주대 5만원 할인 이벤트 적용). 신논현역 4번 출구 도보 3분. 365일 연중무휴. 전화 ${siteConfig.phone}.`,
     ogLocale: 'ko_KR',
   },
   en: {
-    title: `${siteConfig.altName} Gangnam Karaoke | From ₩150,000 · Early Bird Discount`,
-    description: `Premium private karaoke in Yeoksam-dong, Gangnam. Fixed price ₩150,000, ₩50,000 off before 9PM. 3-5 min walk from Sinnonhyeon Station. Open 365 days. Call ${siteConfig.phone}.`,
+    title: `${siteConfig.altName} Gangnam Karaoke | All-Time ₩100,000 · ₩50,000 OFF Event`,
+    description: `Premium private karaoke in Yeoksam-dong, Gangnam. Base price ₩100,000 (₩50,000 OFF all-time event). 3-5 min walk from Sinnonhyeon Station. Open 365 days. Call ${siteConfig.phone}.`,
     ogLocale: 'en_US',
   },
   zh: {
-    title: `${siteConfig.altName} 江南KTV官方 | 酒水费15万起 · 21点前到访享折扣`,
-    description: `首尔江南区驿三洞私人包厢KTV。基本酒水费15万韩元，21点前到访享5万韩元优惠。新论岘站4号出口步行3-5分钟。全年365天营业。`,
+    title: `${siteConfig.altName} 江南KTV官方 | 全时段酒水费10万 · 享5万韩元折扣`,
+    description: `首尔江南区驿三洞私人包厢KTV。全时段酒水费10万韩元（享5万韩元折扣优惠）。新论岘站4号出口步行3-5分钟。全年365天营业。`,
     ogLocale: 'zh_CN',
   },
   ja: {
-    title: `${siteConfig.altName} 江南カラオケ公式 | 飲み代15万ウォン · 21時前割引`,
-    description: `ソウル江南区駅三洞のプライベートルームカラオケ。基本飲み代15万ウォン、21時前ご来店で5万ウォン割引。新論峴駅4番出口徒歩3〜5分。年中無休。`,
+    title: `${siteConfig.altName} 江南カラオケ公式 | オールタイム飲み代10万ウォン · 5万ウォン割引`,
+    description: `ソウル江南区駅三洞のプライベートルームカラオケ。オールタイム基本飲み代10万ウォン（5万ウォン割引キャンペーン適用）。新論峴駅4番出口徒歩3〜5分。年中無休。`,
     ogLocale: 'ja_JP',
   },
 }

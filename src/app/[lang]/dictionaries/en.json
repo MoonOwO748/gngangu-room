@@ -13,14 +13,14 @@
     "open_menu": "Open Menu",
     "close_menu": "Close Menu"
   },
-  "announcement": "Base charge ₩150,000 · ₩50,000 OFF before 9 PM · Open 365 Days",
+  "announcement": "All-Time Base charge ₩100,000 · ₩50,000 OFF Event · Open 365 Days",
   "announcement_cta": "View Details",
   "hero": {
     "badge": "Gangnam Dalto | Gangnam Hyper Public Official Reservation Site",
     "title": "Gangnam Dalto | Gangnam Hyper Public",
-    "subtitle": "Premium private room karaoke in Yeoksam-dong, Gangnam. Transparent fixed pricing, early bird discounts.",
-    "badge_price": "Base 150k",
-    "badge_discount": "50k OFF before 9PM",
+    "subtitle": "Premium private room karaoke in Yeoksam-dong, Gangnam. Transparent fixed pricing, All-time ₩50,000 OFF event.",
+    "badge_price": "Base 100k",
+    "badge_discount": "50k OFF All-Time",
     "badge_fixed": "Fixed Price",
     "badge_hours": "Open 365 Days",
     "call": "Call Now",
@@ -51,8 +51,8 @@
         "desc": "Experienced staff selected to match your party's mood and preferences."
       },
       {
-        "title": "Early Bird Discount",
-        "desc": "Enjoy a ₩50,000 discount on base liquor when visiting before 9 PM."
+        "title": "All-Time Discount Event",
+        "desc": "Enjoy a ₩50,000 discount on base liquor regardless of arrival time (₩100,000 all-time)."
       },
       {
         "title": "1:1 Care & Valet Parking",
@@ -128,7 +128,7 @@
       {
         "num": "03",
         "title": "Transparent Fixed Pricing",
-        "desc": "Base charge ₩150,000, with ₩50,000 off before 9PM. No hidden fees — fully transparent pricing."
+        "desc": "All-time base charge ₩100,000 with ₩50,000 OFF event applied. Transparent pricing without hidden fees."
       },
       {
         "num": "04",
@@ -147,10 +147,10 @@
     "title": "Pricing & Estimated Cost Calculator",
     "subtitle": "We operate under a transparent fixed rate. Calculate your estimated cost in real-time.",
     "base": "Base Liquor Set",
-    "base_price": "150,000",
+    "base_price": "100,000",
     "base_unit": "KRW (Whiskey + Snacks + Drinks)",
-    "discount": "Early Bird Discount",
-    "discount_desc": "When visiting before 9 PM",
+    "discount": "Liquor Discount Event",
+    "discount_desc": "All-Time ₩50,000 OFF Applied",
     "discount_price": "100,000 KRW",
     "tc_girl": "Female Partner Rate (TC)",
     "tc_girl_price": "120,000 / 150,000 KRW",
@@ -161,8 +161,8 @@
     "calculator_title": "Live Cost Calculator",
     "calc_people": "Guests Count",
     "calc_time_slot": "Arrival Time",
-    "calc_early": "Before 9PM (50k OFF)",
-    "calc_normal": "After 9PM (Regular Rate)",
+    "calc_early": "Before 9PM (₩100k)",
+    "calc_normal": "After 9PM (₩100k)",
     "calc_partner_type": "Partner Preference",
     "calc_partner_girl": "Female Host (1st 120k / Ext 150k)",
     "calc_partner_boy": "Male Host (TC 70k)",
@@ -196,7 +196,7 @@
       },
       {
         "q": "What is the base price?",
-        "a": "Base liquor is ₩150,000, and ₩100,000 if visiting before 9 PM. TC and room fees are calculated based on hours and guests."
+        "a": "Base liquor is ₩100,000 all-time (both before & after 9 PM) with our ₩50,000 OFF event applied."
       },
       {
         "q": "What are the opening hours?",
@@ -219,9 +219,9 @@
     "items": [
       {
         "badge": "ONGOING",
-        "title": "Early Bird Discount",
-        "desc": "Get ₩50,000 off the base liquor when visiting before 9 PM! Arrive early for the best value.",
-        "highlight": "₩50,000 OFF"
+        "title": "All-Time ₩50,000 OFF Base Liquor",
+        "desc": "Get ₩50,000 off base liquor anytime! Available at ₩100,000 all-time before & after 9 PM.",
+        "highlight": "All-Time ₩100,000"
       },
       {
         "badge": "GROUPS",

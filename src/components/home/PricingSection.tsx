@@ -22,7 +22,7 @@ export function PricingSection({ dict, className, hideHeader = false }: Props) {
   const [hours, setHours] = useState<number>(2)
 
   // Pricing constants
-  const baseLiquorPrice = isEarly ? 100000 : 150000
+  const baseLiquorPrice = 100000
   const roomFee = 50000
 
   // Calculate TC Total
@@ -68,19 +68,19 @@ export function PricingSection({ dict, className, hideHeader = false }: Props) {
             </div>
             <p className="mt-2 text-xs" style={{ color: 'var(--bone-dim)' }}>위스키 + 안주 + 음료 세트</p>
           </div>
-          <span className="mt-4 text-xs font-medium" style={{ color: 'var(--accent-bright)' }}>9시 전 방문 시 ₩100,000</span>
+          <span className="mt-4 text-xs font-medium" style={{ color: 'var(--accent-bright)' }}>올타임 주대 5만원 할인 적용</span>
         </div>
 
-        {/* Early Discount */}
+        {/* All Time Event Discount */}
         <div className="glass-card flex flex-col justify-between rounded-2xl p-6 md:p-8">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--mauve)' }}>{p.discount}</span>
             <div className="mt-3 flex items-baseline gap-1">
               <span className="text-3xl font-extrabold" style={{ color: 'var(--bone)' }}>-₩50,000</span>
             </div>
-            <p className="mt-2 text-xs" style={{ color: 'var(--bone-dim)' }}>오후 9시 이전 방문 시 적용</p>
+            <p className="mt-2 text-xs" style={{ color: 'var(--bone-dim)' }}>주대 올타임 5만원 할인 이벤트</p>
           </div>
-          <span className="mt-4 text-xs font-medium" style={{ color: 'var(--bone-dim)' }}>기본 주대 ₩50,000 할인</span>
+          <span className="mt-4 text-xs font-medium" style={{ color: 'var(--bone-dim)' }}>상시 ₩100,000 적용</span>
         </div>
 
         {/* Female TC */}
@@ -148,7 +148,7 @@ export function PricingSection({ dict, className, hideHeader = false }: Props) {
                   className={`rounded-xl border p-3.5 text-left text-xs font-semibold transition-all ${!isEarly ? 'border-accent bg-accent/15 text-bone' : 'border-white/10 bg-white/5 text-bone-dim'}`}
                 >
                   <p className="font-bold">{p.calc_normal}</p>
-                  <p className="mt-1 text-[11px] opacity-75">주대 ₩150,000 적용</p>
+                  <p className="mt-1 text-[11px] opacity-75">주대 ₩100,000 적용</p>
                 </button>
               </div>
             </div>
@@ -230,15 +230,13 @@ export function PricingSection({ dict, className, hideHeader = false }: Props) {
 
                 <div className="mt-5 border-t border-b py-4" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
                   <div className="flex justify-between text-xs py-1.5" style={{ color: 'var(--bone-dim)' }}>
-                    <span>주류 (기본 세트)</span>
+                    <span>주류 (기본 세트 정가)</span>
                     <span className="font-semibold text-bone">₩150,000</span>
                   </div>
-                  {isEarly && (
-                    <div className="flex justify-between text-xs py-1.5 font-semibold" style={{ color: 'var(--accent-bright)' }}>
-                      <span>얼리버드 할인 (9시 이전)</span>
-                      <span>-₩50,000</span>
-                    </div>
-                  )}
+                  <div className="flex justify-between text-xs py-1.5 font-semibold" style={{ color: 'var(--accent-bright)' }}>
+                    <span>주대 올타임 할인 이벤트</span>
+                    <span>-₩50,000</span>
+                  </div>
                   <div className="flex justify-between text-xs py-1.5" style={{ color: 'var(--bone-dim)' }}>
                     <span>타임비 ({partnerType === 'girl' ? '아가씨 TC' : partnerType === 'boy' ? '선수 TC' : '없음'})</span>
                     <span className="font-semibold text-bone">

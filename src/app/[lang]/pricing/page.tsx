@@ -39,7 +39,7 @@ export default async function PricingPage({ params }: Props) {
 
           <p className="mt-4 text-sm leading-relaxed md:text-base" style={{ color: 'var(--bone-dim)' }}>
             강남 달토는 바가지 요금 없는 100% 투명 정찰제로 운영됩니다. 
-            기본 주대부터 타임비(TC)와 룸비(RT)까지 명확히 공개하며, 9시 이전 방문 시 5만원 즉시 할인 혜택을 제공합니다.
+            기본 주대부터 타임비(TC)와 룸비(RT)까지 명확히 공개하며, 올타임 주대 5만원 할인 이벤트를 통해 상시 10만원에 이용 가능합니다.
           </p>
 
           {/* Key perks pill list */}
@@ -47,11 +47,11 @@ export default async function PricingPage({ params }: Props) {
           <div className="mt-6 flex flex-wrap gap-2.5">
             <span className="inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-1.5 text-xs font-bold" style={{ borderColor: 'rgba(212,149,106,0.3)', background: 'rgba(212,149,106,0.1)', color: 'var(--accent-bright)' }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              기본 주대 ₩150,000
+              올타임 기본 주대 ₩100,000
             </span>
             <span className="inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-1.5 text-xs font-bold" style={{ borderColor: 'rgba(212,149,106,0.3)', background: 'rgba(212,149,106,0.1)', color: 'var(--accent-bright)' }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              9시 이전 ₩50,000 할인
+              주대 ₩50,000 할인 이벤트
             </span>
             <span className="inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-1.5 text-xs font-bold" style={{ borderColor: 'rgba(212,149,106,0.3)', background: 'rgba(212,149,106,0.1)', color: 'var(--accent-bright)' }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -107,9 +107,9 @@ export default async function PricingPage({ params }: Props) {
                 <polyline points="12 6 12 12 16 14"/>
               </svg>
             </span>
-            <h3 className="mt-4 text-base font-bold" style={{ color: 'var(--bone)' }}>얼리버드 할인 혜택</h3>
+            <h3 className="mt-4 text-base font-bold" style={{ color: 'var(--bone)' }}>주대 5만원 할인 혜택</h3>
             <p className="mt-2 text-xs leading-relaxed" style={{ color: 'var(--bone-dim)' }}>
-              오후 9시 이전 입장 고객님께 기본 주대 5만원 할인 혜택을 정확히 적용합니다.
+              올타임 주대 5만원 할인 이벤트를 적용하여 언제 방문하셔도 기본 주대 10만원에 제공합니다.
             </p>
           </div>
 
