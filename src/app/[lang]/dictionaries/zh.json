@@ -16,8 +16,8 @@
   "announcement": "基本酒水费 15万韩元 · 晚9点前到访享5万韩元折扣 · 365天全年无休",
   "announcement_cta": "查看详情",
   "hero": {
-    "badge": "AK Dalto 官方预订网站",
-    "title": "江南 AK Dalto",
+    "badge": "江南 Dalto | 江南高级 KTV 官方预订网站",
+    "title": "江南 Dalto | 江南高级 KTV",
     "subtitle": "位于江南驿三洞的顶级私人包厢KTV。明码标价，晚9点前享受折扣优惠。",
     "badge_price": "酒水 15万",
     "badge_discount": "9点前优惠5万",
@@ -28,10 +28,10 @@
     "urgent": "如需紧急咨询，电话最为快捷"
   },
   "about": {
-    "label": "ABOUT AK DALTO",
-    "title": "江南代表性高级 KTV AK Dalto",
+    "label": "ABOUT 江南 Dalto | 江南高级 KTV",
+    "title": "江南代表性高级 KTV - 江南 Dalto",
     "subtitle": "位于首尔江南区驿三洞604-11三井酒店 · 拥有60间包厢 & 每日约200名员工在岗",
-    "desc1": "AK Dalto 是江南代表性的高级KTV会所。坐落于江南区驿三洞三井酒店，拥有60间独立包厢，每日约200名员工到岗，资源丰富且环境优雅。",
+    "desc1": "Dalto 是江南代表性的高级KTV会所。坐落于江南区驿三洞三井酒店，拥有60间独立包厢，每日约200名员工到岗，资源丰富且环境优雅。",
     "desc2": "宽敞舒适的包厢、精致时尚的装修，结合拥有10年经验的专业经理团队，根据宾客的选人风格、理想型与性格提供1:1专属定制服务。无论商务接待还是派对聚会，均能完美适配。",
     "badge1": "拥有 60 间包厢",
     "badge2": "每日 200+ 员工",
@@ -39,7 +39,7 @@
   },
   "system": {
     "label": "SYSTEM & RULES",
-    "title": "AK Dalto 消费与规则指南",
+    "title": "江南 Dalto 消费与规则指南",
     "subtitle": "所有消费标准与运营规则均严格执行透明明码标价。",
     "items": [
       {
@@ -90,7 +90,7 @@
   "who_is_it_for": {
     "label": "WHO IS IT FOR",
     "title": "推荐人群",
-    "subtitle": "AK Dalto 适合追求沉稳舒适与流畅服务的宾客。",
+    "subtitle": "江南 Dalto 适合追求沉稳舒适与流畅服务的宾客。",
     "targets": [
       {
         "title": "商务 VIP 款待",
@@ -112,7 +112,7 @@
   },
   "why_us": {
     "label": "WHY US",
-    "title": "为什么选择 AK Dalto",
+    "title": "为什么选择 江南 Dalto",
     "subtitle": "舒适胜于华丽，老练胜于青涩。常客不断回来，自有其道理。",
     "features": [
       {
@@ -215,7 +215,7 @@
   "events": {
     "label": "EVENTS & PROMOTIONS",
     "title": "活动与优惠",
-    "subtitle": "查看AK Dalto目前正在进行的特别优惠。",
+    "subtitle": "查看江南 Dalto目前正在进行的特别优惠。",
     "items": [
       {
         "badge": "常年优惠",
@@ -274,6 +274,6 @@
   "footer": {
     "address": "首尔特别市江南区驿三洞 604-11",
     "hours": "每天 18:00 ~ 次日 15:00",
-    "copyright": "© 2025 AK Dalto. All rights reserved."
+    "copyright": "© 2025 江南 Dalto | 江南高级 KTV. All rights reserved."
   }
 }

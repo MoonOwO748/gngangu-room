@@ -42,17 +42,17 @@ export function Header({ dict, lang }: Props) {
         {/* Logo */}
         <Link
           href={`/${lang}`}
-          aria-label="AK 달토"
+          aria-label="강남 달토 | 강남 하이퍼블릭"
           className="group flex shrink-0 items-center gap-2 leading-none"
         >
           <span
             className="font-display text-lg font-bold tracking-tight transition-colors group-hover:text-gold"
             style={{ color: 'var(--bone)' }}
           >
-            AK DALTO
+            강남 달토
           </span>
           <span className="text-xs tracking-wide transition-colors group-hover:text-bone" style={{ color: 'var(--bone-dim)' }}>
-            가라오케
+            | 강남 하이퍼블릭
           </span>
         </Link>
 

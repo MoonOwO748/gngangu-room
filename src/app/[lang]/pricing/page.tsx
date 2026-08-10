@@ -34,11 +34,11 @@ export default async function PricingPage({ params }: Props) {
           </div>
 
           <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl lg:text-6xl" style={{ color: 'var(--bone)' }}>
-            AK 달토 요금 안내
+            강남 달토 요금 안내
           </h1>
 
           <p className="mt-4 text-sm leading-relaxed md:text-base" style={{ color: 'var(--bone-dim)' }}>
-            강남 AK 달토는 바가지 요금 없는 100% 투명 정찰제로 운영됩니다. 
+            강남 달토는 바가지 요금 없는 100% 투명 정찰제로 운영됩니다. 
             기본 주대부터 타임비(TC)와 룸비(RT)까지 명확히 공개하며, 9시 이전 방문 시 5만원 즉시 할인 혜택을 제공합니다.
           </p>
 

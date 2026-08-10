@@ -16,8 +16,8 @@
   "announcement": "Base charge ₩150,000 · ₩50,000 OFF before 9 PM · Open 365 Days",
   "announcement_cta": "View Details",
   "hero": {
-    "badge": "AK Dalto Official Reservation Site",
-    "title": "Gangnam AK Dalto",
+    "badge": "Gangnam Dalto | Gangnam Hyper Public Official Reservation Site",
+    "title": "Gangnam Dalto | Gangnam Hyper Public",
     "subtitle": "Premium private room karaoke in Yeoksam-dong, Gangnam. Transparent fixed pricing, early bird discounts.",
     "badge_price": "Base 150k",
     "badge_discount": "50k OFF before 9PM",
@@ -28,10 +28,10 @@
     "urgent": "For urgent inquiries, phone calls are fastest"
   },
   "about": {
-    "label": "ABOUT AK DALTO",
-    "title": "Gangnam's Premier Hyper-Public AK Dalto",
+    "label": "ABOUT GANGNAM DALTO | GANGNAM HYPER PUBLIC",
+    "title": "Gangnam's Premier Hyper-Public Dalto",
     "subtitle": "Located at Samjung Hotel, 604-11 Yeoksam-dong · 60 Private Rooms & ~200 Staff Daily",
-    "desc1": "AK Dalto is the flagship hyper-public venue in Gangnam. Situated at Samjung Hotel in Yeoksam-dong, we operate 60 private rooms with around 200 staff on duty every single day.",
+    "desc1": "Dalto is the flagship hyper-public venue in Gangnam. Situated at Samjung Hotel in Yeoksam-dong, we operate 60 private rooms with around 200 staff on duty every single day.",
     "desc2": "With spacious, elegant interiors and managers with over 10 years of experience, we provide tailored hospitality matching your preferred choice style, ideal partner type, and personality.",
     "badge1": "60 Private Rooms",
     "badge2": "200+ Daily Staff",
@@ -39,7 +39,7 @@
   },
   "system": {
     "label": "SYSTEM & RULES",
-    "title": "AK Dalto System Guide",
+    "title": "Gangnam Dalto System Guide",
     "subtitle": "All rates and operating rules are strictly managed under transparent fixed pricing.",
     "items": [
       {
@@ -90,7 +90,7 @@
   "who_is_it_for": {
     "label": "WHO IS IT FOR",
     "title": "Who Is This For?",
-    "subtitle": "AK Dalto is highly recommended for guests who value comfort and seamless service.",
+    "subtitle": "Gangnam Dalto is highly recommended for guests who value comfort and seamless service.",
     "targets": [
       {
         "title": "Corporate VIP Entertainment",
@@ -112,7 +112,7 @@
   },
   "why_us": {
     "label": "WHY US",
-    "title": "Why Choose AK Dalto",
+    "title": "Why Choose Gangnam Dalto",
     "subtitle": "Comfort over flashiness, experience over novelty. There's a reason guests keep coming back.",
     "features": [
       {
@@ -215,7 +215,7 @@
   "events": {
     "label": "EVENTS & PROMOTIONS",
     "title": "Events & Promotions",
-    "subtitle": "Check out special offers currently available at AK Dalto.",
+    "subtitle": "Check out special offers currently available at Gangnam Dalto.",
     "items": [
       {
         "badge": "ONGOING",
@@ -274,6 +274,6 @@
   "footer": {
     "address": "604-11 Yeoksam-dong, Gangnam-gu, Seoul",
     "hours": "Daily 18:00 - 15:00 Next Day",
-    "copyright": "© 2025 AK Dalto. All rights reserved."
+    "copyright": "© 2025 Gangnam Dalto | Gangnam Hyper Public. All rights reserved."
   }
 }
