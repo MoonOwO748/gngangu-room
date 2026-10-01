@@ -1,12 +1,7 @@
 import { getCustomerReviews } from '@/lib/wordpress'
-import type { getDictionary } from '@/app/[lang]/dictionaries'
-
-type Dict = Awaited<ReturnType<typeof getDictionary>>
-
-interface Props { dict: Dict }
-
-export async function ReviewsSection({ dict }: Props) {
+export async function ReviewsSection() {
   const reviews = await getCustomerReviews()
+  const isDemo = reviews.every((review) => review.isDemo)
 
   return (
     <section className="scroll-reveal px-4 pt-16 sm:px-8 md:px-12 lg:px-16 md:pt-28 lg:pt-32">
@@ -18,10 +13,10 @@ export async function ReviewsSection({ dict }: Props) {
           </p>
         </div>
         <h2 className="mt-4 text-[2.25rem] font-bold leading-[1.05] tracking-tight md:text-5xl" style={{ color: 'var(--bone)' }}>
-          달토를 다녀가신 고객님들의 리얼 후기
+          {isDemo ? '이용 후기 예시' : '달토를 다녀가신 고객님들의 후기'}
         </h2>
         <p className="mt-4 max-w-[33em] text-sm leading-relaxed md:text-base" style={{ color: 'var(--bone-dim)' }}>
-          비즈니스 접대부터 단체 회식, 생일 파티까지. 달토의 정찰제 서비스와 노련한 1:1 케어에 만족하신 실제 고객 후기입니다.
+          {isDemo ? '아래 내용은 화면 구성을 위한 예시이며 실제 고객 후기가 아닙니다.' : '고객님들이 남겨 주신 이용 후기를 확인하세요.'}
         </p>
       </header>
 
@@ -44,7 +39,7 @@ export async function ReviewsSection({ dict }: Props) {
 
               {/* Content */}
               <p className="mt-4 text-xs leading-relaxed md:text-sm" style={{ color: 'var(--bone-dim)' }}>
-                "{rev.content}"
+                &quot;{rev.content}&quot;
               </p>
             </div>
 

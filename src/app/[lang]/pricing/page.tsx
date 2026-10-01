@@ -1,8 +1,11 @@
+import { createPageMetadata } from '@/lib/seo'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { hasLocale, getDictionary } from '../dictionaries'
 import { PricingSection } from '@/components/home/PricingSection'
 import { siteConfig } from '@/config/site'
+
+export const generateMetadata = createPageMetadata('pricing')
 
 interface Props {
   params: Promise<{ lang: string }>
@@ -15,7 +18,7 @@ export default async function PricingPage({ params }: Props) {
   const dict = await getDictionary(lang)
 
   return (
-    <main className="mx-auto w-full max-w-[1440px] px-4 py-10 sm:px-8 md:px-12 lg:px-16 md:py-16">
+    <div className="mx-auto w-full max-w-[1440px] px-4 py-10 sm:px-8 md:px-12 lg:px-16 md:py-16">
       {/* Page Header Hero */}
       <section className="glass-card relative overflow-hidden rounded-3xl p-8 md:p-14">
         {/* Glow effect */}
@@ -173,6 +176,6 @@ export default async function PricingPage({ params }: Props) {
           </Link>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

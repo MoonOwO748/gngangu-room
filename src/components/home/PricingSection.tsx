@@ -116,7 +116,7 @@ export function PricingSection({ dict, className, hideHeader = false }: Props) {
               {p.calculator_title}
             </h3>
             <p className="mt-1 text-xs md:text-sm" style={{ color: 'var(--bone-dim)' }}>
-              인원수, 방문 시간대, 파트너 및 이용 시간을 조절하여 예상 비용을 실시간으로 확인해보세요.
+              인원수와 이용 시간을 선택하세요. 예상 합계에는 주대, 선택한 타임비와 RT(룸비)가 포함됩니다.
             </p>
           </div>
           <span className="inline-flex shrink-0 items-center gap-2 rounded-full border px-3.5 py-1.5 text-xs font-semibold" style={{ borderColor: 'rgba(212,149,106,0.3)', color: 'var(--accent-bright)', background: 'rgba(212,149,106,0.1)' }}>

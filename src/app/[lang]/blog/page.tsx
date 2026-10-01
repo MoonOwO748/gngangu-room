@@ -1,8 +1,11 @@
+import { createPageMetadata } from '@/lib/seo'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { hasLocale, getDictionary } from '../dictionaries'
 import { getBlogPosts } from '@/lib/wordpress'
 import { siteConfig } from '@/config/site'
+
+export const generateMetadata = createPageMetadata('blog')
 
 interface Props {
   params: Promise<{ lang: string }>
@@ -16,7 +19,7 @@ export default async function BlogPage({ params }: Props) {
   const posts = await getBlogPosts()
 
   return (
-    <main className="mx-auto w-full max-w-[1440px] px-4 py-10 sm:px-8 md:px-12 lg:px-16 md:py-16">
+    <div className="mx-auto w-full max-w-[1440px] px-4 py-10 sm:px-8 md:px-12 lg:px-16 md:py-16">
       {/* Page Header Hero */}
       <section className="glass-card relative overflow-hidden rounded-3xl p-8 md:p-14">
         <div
@@ -38,10 +41,14 @@ export default async function BlogPage({ params }: Props) {
           </h1>
 
           <p className="mt-4 text-sm leading-relaxed md:text-base" style={{ color: 'var(--bone-dim)' }}>
-            강남 가라오케 이용 정보부터 주대 할인 혜택, 비즈니스 접대 노하우까지 달토의 공식 소식을 확인해 보세요. (WordPress CMS 연동 준비 완료)
+            강남 가라오케 이용 정보부터 주대 할인 혜택, 비즈니스 접대 노하우까지 달토의 공식 소식을 확인해 보세요.
           </p>
         </div>
       </section>
+
+      {posts.every((post) => post.isDemo) && (
+        <p className="mt-6 text-sm text-bone-dim">아래 글은 예시 자료입니다. 실제 발행 글과 상세 내용은 준비 중입니다.</p>
+      )}
 
       {/* Blog Cards Grid */}
       <section className="mt-12 md:mt-16">
@@ -76,9 +83,13 @@ export default async function BlogPage({ params }: Props) {
               </div>
 
               <div className="mt-6 border-t pt-4 border-white/5 flex items-center justify-between">
-                <span className="text-xs font-semibold text-accent flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                  자세히 읽기 →
-                </span>
+                {post.url ? (
+                  <a href={post.url} className="text-xs font-semibold text-accent" aria-label={`${post.title} 자세히 읽기`}>
+                    자세히 읽기 →
+                  </a>
+                ) : (
+                  <span className="text-xs text-bone-dim">요약 안내</span>
+                )}
               </div>
             </article>
           ))}
@@ -122,6 +133,6 @@ export default async function BlogPage({ params }: Props) {
           </Link>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

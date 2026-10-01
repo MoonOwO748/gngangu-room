@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import type { getDictionary } from '@/app/[lang]/dictionaries'
 
 type Dict = Awaited<ReturnType<typeof getDictionary>>
@@ -19,6 +20,8 @@ interface Props {
 
 export function Header({ dict, lang }: Props) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const localizedPath = (locale: string) => pathname.replace(/^\/(ko|en|zh|ja)(?=\/|$)/, `/${locale}`)
 
   const navLinks = [
     { href: `/${lang}/pricing`, label: dict.nav.pricing },
@@ -77,8 +80,8 @@ export function Header({ dict, lang }: Props) {
             {LOCALES.map((l) => (
               <Link
                 key={l.code}
-                href={`/${l.code}`}
-                hrefLang={l.code}
+                href={localizedPath(l.code)}
+                hrefLang={l.code === 'zh' ? 'zh-CN' : l.code}
                 aria-current={l.code === lang ? 'page' : undefined}
                 className="px-1.5 py-2 tracking-widest uppercase transition-colors"
                 style={{ color: l.code === lang ? 'var(--accent)' : 'var(--bone-dim)' }}
@@ -156,8 +159,8 @@ export function Header({ dict, lang }: Props) {
               {LOCALES.map((l) => (
                 <Link
                   key={l.code}
-                  href={`/${l.code}`}
-                  hrefLang={l.code}
+                  href={localizedPath(l.code)}
+                  hrefLang={l.code === 'zh' ? 'zh-CN' : l.code}
                   onClick={() => setMenuOpen(false)}
                   className="text-xs tracking-widest uppercase transition-colors"
                   style={{ color: l.code === lang ? 'var(--accent)' : 'var(--bone-dim)' }}

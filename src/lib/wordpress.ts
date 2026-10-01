@@ -15,6 +15,8 @@ export interface WPPost {
   author?: string
   category?: string
   featuredImage?: string
+  url?: string
+  isDemo?: boolean
 }
 
 export interface WPReview {
@@ -24,9 +26,28 @@ export interface WPReview {
   date: string
   content: string
   visitType?: string
+  isDemo?: boolean
 }
 
 const WP_URL = process.env.NEXT_PUBLIC_WORDPRESS_URL
+
+interface WPRestPost {
+  link?: string
+  id: number
+  slug: string
+  title?: { rendered?: string }
+  excerpt?: { rendered?: string }
+  content?: { rendered?: string }
+  date?: string
+  _embedded?: {
+    'wp:term'?: { name?: string }[][]
+    'wp:featuredmedia'?: { source_url?: string }[]
+  }
+}
+
+interface WPRestReview extends WPRestPost {
+  acf?: { rating?: number | string; visit_type?: string }
+}
 
 /**
  * Fetch Blog Posts from WordPress REST API (Fast 3s timeout with fallback)
@@ -41,9 +62,10 @@ export async function getBlogPosts(): Promise<WPPost[]> {
       if (res.ok) {
         const posts = await res.json()
         if (Array.isArray(posts) && posts.length > 0) {
-          return posts.map((p: any) => ({
+          return posts.map((p: WPRestPost) => ({
             id: String(p.id),
             slug: p.slug,
+            url: p.link && /^https?:\/\//i.test(p.link) ? p.link : undefined,
             title: p.title?.rendered || '',
             excerpt: p.excerpt?.rendered?.replace(/<[^>]+>/g, '') || '',
             content: p.content?.rendered || '',
@@ -84,7 +106,7 @@ export async function getBlogPosts(): Promise<WPPost[]> {
       date: '2025-07-20',
       category: '모임안내',
     },
-  ]
+  ].map((item) => ({ ...item, isDemo: true }))
 }
 
 /**
@@ -100,7 +122,7 @@ export async function getCustomerReviews(): Promise<WPReview[]> {
       if (res.ok) {
         const reviews = await res.json()
         if (Array.isArray(reviews) && reviews.length > 0) {
-          return reviews.map((r: any) => ({
+          return reviews.map((r: WPRestReview) => ({
             id: String(r.id),
             authorName: r.title?.rendered || '고객님',
             rating: Number(r.acf?.rating || 5),
@@ -149,5 +171,5 @@ export async function getCustomerReviews(): Promise<WPReview[]> {
       visitType: '귀빈 단독 방문',
       content: '혼자 가볍게 주류와 여유를 즐기러 들렀는데 눈치 보이지 않고 편안하게 대해주셔서 감동이었습니다. 주대 투명한 점이 가장 마음에 듭니다.',
     },
-  ]
+  ].map((item) => ({ ...item, isDemo: true }))
 }

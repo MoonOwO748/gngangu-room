@@ -1,7 +1,10 @@
+import { createPageMetadata } from '@/lib/seo'
 import { notFound } from 'next/navigation'
 import { hasLocale, getDictionary } from '../dictionaries'
 import Link from 'next/link'
 import { siteConfig } from '@/config/site'
+
+export const generateMetadata = createPageMetadata('reserve')
 
 interface Props {
   params: Promise<{ lang: string }>

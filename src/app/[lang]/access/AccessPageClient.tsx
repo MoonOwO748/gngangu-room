@@ -53,7 +53,7 @@ export default function AccessPageClient({ dict, lang }: Props) {
 </html>`
 
   return (
-    <main className="mx-auto w-full max-w-[1440px] px-4 py-10 sm:px-8 md:px-12 lg:px-16 md:py-16">
+    <div className="mx-auto w-full max-w-[1440px] px-4 py-10 sm:px-8 md:px-12 lg:px-16 md:py-16">
       {/* Page Header Hero */}
       <section className="px-3 pt-6 sm:px-5 md:pt-10">
         <div className="max-w-3xl">
@@ -281,6 +281,6 @@ export default function AccessPageClient({ dict, lang }: Props) {
           </Link>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

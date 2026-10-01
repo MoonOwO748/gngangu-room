@@ -20,10 +20,11 @@ export function proxy(request: NextRequest) {
 
   // Redirect root to default locale
   const locale = getLocale(request)
-  const newUrl = new URL(`/${locale}${pathname === '/' ? '' : pathname}`, request.url)
+  const newUrl = request.nextUrl.clone()
+  newUrl.pathname = `/${locale}${pathname === '/' ? '' : pathname}`
   return NextResponse.redirect(newUrl)
 }
 
 export const config = {
-  matcher: ['/((?!_next/static|_next/image|favicon.ico|icon.svg|apple-icon.png|og|images|fonts|hero.jpg).*)'],
+  matcher: ['/((?!_next/static|_next/image|robots\\.txt|sitemap\\.xml|favicon.ico|icon.svg|apple-icon.png|og|images|fonts|hero.jpg).*)'],
 }

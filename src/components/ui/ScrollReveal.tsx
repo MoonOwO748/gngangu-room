@@ -7,37 +7,17 @@ export function ScrollReveal() {
   const pathname = usePathname()
 
   useEffect(() => {
-    const revealAll = () => {
-      const els = document.querySelectorAll('.scroll-reveal')
-      if (els.length === 0) return
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add('revealed')
-              observer.unobserve(e.target)
-            }
-          })
-        },
-        { threshold: 0.01 } // Lower threshold for instant reveal
-      )
-
-      els.forEach((el) => {
-        // If already in viewport, immediately reveal
-        const rect = el.getBoundingClientRect()
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          el.classList.add('revealed')
-        } else {
-          observer.observe(el)
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed')
+          observer.unobserve(entry.target)
         }
       })
-    }
-
-    revealAll()
-    const timer = setTimeout(revealAll, 150)
-
-    return () => clearTimeout(timer)
+    }, { threshold: 0.01 })
+    document.querySelectorAll('.scroll-reveal:not(.revealed)').forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
   }, [pathname])
 
   return null

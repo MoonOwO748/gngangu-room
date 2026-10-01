@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { getDictionary } from '@/app/[lang]/dictionaries'
 import { siteConfig } from '@/config/site'
 
@@ -16,9 +17,12 @@ export function HeroSection({ dict, lang }: Props) {
         style={{ background: 'var(--surface)' }}
       >
         {/* Hero background image */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/hero.jpg"
+          fill
+          sizes="(min-width: 1440px) 1312px, 100vw"
+          loading="eager"
+          fetchPriority="high"
           alt={`${siteConfig.name} 프리미엄 라운지 외관`}
           className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center"
         />
@@ -54,7 +58,7 @@ export function HeroSection({ dict, lang }: Props) {
               className="mt-6 text-[2.5rem] font-bold leading-[1.05] tracking-tight md:mt-8 md:text-[3.25rem] lg:text-[4rem]"
               style={{ color: 'var(--bone)' }}
             >
-              {siteConfig.name}
+              {h.title}
             </h1>
 
             {/* Subtitle */}

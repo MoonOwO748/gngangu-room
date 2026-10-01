@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { Noto_Sans_KR, Noto_Sans_SC, Noto_Sans_JP } from 'next/font/google'
 
@@ -22,66 +21,8 @@ import { siteConfig } from '@/config/site'
 
 const BASE_URL = siteConfig.url
 
-const metaByLocale: Record<string, { title: string; description: string; ogLocale: string }> = {
-  ko: {
-    title: `${siteConfig.name} 강남 가라오케 공식 | 올타임 주대 10만 · 5만 할인 이벤트`,
-    description: `서울 강남구 역삼동 프라이빗 룸 가라오케 ${siteConfig.name}. 기본 주대 올타임 10만원 (주대 5만원 할인 이벤트 적용). 신논현역 4번 출구 도보 3분. 365일 연중무휴. 전화 ${siteConfig.phone}.`,
-    ogLocale: 'ko_KR',
-  },
-  en: {
-    title: `${siteConfig.altName} Gangnam Karaoke | All-Time ₩100,000 · ₩50,000 OFF Event`,
-    description: `Premium private karaoke in Yeoksam-dong, Gangnam. Base price ₩100,000 (₩50,000 OFF all-time event). 3-5 min walk from Sinnonhyeon Station. Open 365 days. Call ${siteConfig.phone}.`,
-    ogLocale: 'en_US',
-  },
-  zh: {
-    title: `${siteConfig.altName} 江南KTV官方 | 全时段酒水费10万 · 享5万韩元折扣`,
-    description: `首尔江南区驿三洞私人包厢KTV。全时段酒水费10万韩元（享5万韩元折扣优惠）。新论岘站4号出口步行3-5分钟。全年365天营业。`,
-    ogLocale: 'zh_CN',
-  },
-  ja: {
-    title: `${siteConfig.altName} 江南カラオケ公式 | オールタイム飲み代10万ウォン · 5万ウォン割引`,
-    description: `ソウル江南区駅三洞のプライベートルームカラオケ。オールタイム基本飲み代10万ウォン（5万ウォン割引キャンペーン適用）。新論峴駅4番出口徒歩3〜5分。年中無休。`,
-    ogLocale: 'ja_JP',
-  },
-}
-
 export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }))
-}
-
-export async function generateMetadata({ params }: Omit<LayoutProps, 'children'>): Promise<Metadata> {
-  const { lang } = await params
-  const m = metaByLocale[lang] ?? metaByLocale.ko
-
-  return {
-    title: { default: m.title, template: `%s | ${siteConfig.name}` },
-    description: m.description,
-    alternates: {
-      canonical: `${BASE_URL}/${lang}`,
-      languages: {
-        ko: `${BASE_URL}/ko`,
-        en: `${BASE_URL}/en`,
-        'zh-CN': `${BASE_URL}/zh`,
-        ja: `${BASE_URL}/ja`,
-        'x-default': `${BASE_URL}/ko`,
-      },
-    },
-    openGraph: {
-      title: m.title,
-      description: m.description,
-      url: `${BASE_URL}/${lang}`,
-      siteName: siteConfig.name,
-      locale: m.ogLocale,
-      type: 'website',
-      images: [{ url: `${BASE_URL}/og/default.jpg`, width: 1200, height: 630, alt: `${siteConfig.altName} Gangnam Karaoke` }],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: m.title,
-      description: m.description,
-      images: [`${BASE_URL}/og/default.jpg`],
-    },
-  }
 }
 
 export default async function LocaleLayout({ children, params }: LayoutProps) {
@@ -97,7 +38,8 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
         '@type': 'WebSite',
         '@id': `${BASE_URL}/#website`,
         url: BASE_URL,
-        name: siteConfig.altName,
+        name: siteConfig.name,
+        alternateName: siteConfig.altName,
         inLanguage: ['ko', 'en', 'zh-CN', 'ja'],
       },
       {
@@ -107,6 +49,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
         alternateName: [siteConfig.altName, siteConfig.name, 'Gangnam Karaoke', '江南KTV', '江南カラオケ'],
         url: BASE_URL,
         telephone: siteConfig.phoneTel,
+        image: `${BASE_URL}/hero.jpg`,
         address: {
           '@type': 'PostalAddress',
           streetAddress: '역삼동 604-11',
