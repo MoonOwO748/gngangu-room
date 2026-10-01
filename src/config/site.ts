@@ -1,6 +1,6 @@
-// Match the production www redirect, including older non-www environment values.
-const canonicalUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.gngangu-room.com')
-if (canonicalUrl.hostname === 'gngangu-room.com') canonicalUrl.hostname = 'www.gngangu-room.com'
+// Match the production non-www domain, including older www environment values.
+const canonicalUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://gngangu-room.com')
+if (canonicalUrl.hostname === 'www.gngangu-room.com') canonicalUrl.hostname = 'gngangu-room.com'
 
 export const siteConfig = {
   name: process.env.NEXT_PUBLIC_SITE_NAME || '강남 달토 | 강남 하이퍼블릭',
